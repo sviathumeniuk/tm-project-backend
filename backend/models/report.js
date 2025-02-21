@@ -23,17 +23,16 @@ const ReportSchema = new mongoose.Schema({
         required: true
     },
 
-    dateRange: {
-        start: {
-          type: Date,
-          required: true
-        },
-        end: {
-          type: Date,
-          required: true
-        }
+    startDate: {
+        type: Date,
+        required: true
+    },
+
+    endDate: {
+        type: Date,
+        required: true
     }
-});
+  });
 
 const Report = mongoose.model('Report', ReportSchema);
 module.exports = Report;

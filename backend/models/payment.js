@@ -20,13 +20,11 @@ const PaymentSchema = new mongoose.Schema({
 
     paymentStatus: {
         type: String,
-        enum: ['paid', 'pending'],
         required: true
     },
 
     paymentMethod: {
         type: String,
-        enum: ['cash', 'bank transfer'],
         required: true
     },
 
