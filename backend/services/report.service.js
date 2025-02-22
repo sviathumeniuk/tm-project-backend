@@ -1,11 +1,6 @@
 const Report = require('../models/report');
+const createGenericService = require('./base.service');
 
-exports.getAllReports = () => Report.find();
+const reportService = createGenericService(Report);
 
-exports.getReportById = (id) => Report.findById(id); 
-
-exports.createReport = (reportData) => new Report(reportData).save();
-
-exports.updateReport = (id, reportData) => Report.findByIdAndUpdate(id, reportData, { new: true });
-
-exports.deleteReport = (id) => Report.findByIdAndDelete(id);
+module.exports = reportService;

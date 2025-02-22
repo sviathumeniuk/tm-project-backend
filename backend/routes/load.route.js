@@ -3,10 +3,10 @@ const loadController = require('../controllers/load.controller');
 const { authMiddleware } = require("../middleware/auth.middleware");
 const router = express.Router();
 
-router.get('/', authMiddleware, loadController.getAllLoads);
-router.get('/:id', authMiddleware, loadController.getLoadById);
-router.post('/', authMiddleware, loadController.createLoad);
-router.put('/:id', authMiddleware, loadController.updateLoad);
-router.delete('/:id', authMiddleware, loadController.deleteLoad);
+router.get('/', authMiddleware, loadController.getAll);
+router.get('/:id', authMiddleware, loadController.getById);
+router.post('/', authMiddleware, loadController.create);
+router.put('/:id', authMiddleware, loadController.update);
+router.delete('/:id', authMiddleware, loadController.delete);
 
 module.exports = router;

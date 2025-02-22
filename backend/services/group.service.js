@@ -1,11 +1,6 @@
 const Group = require("../models/group");
+const createGenericService = require("./base.service");
 
-exports.getAllGroups = () => Group.find();
+const groupService = createGenericService(Group);
 
-exports.getGroupById = (id) => Group.findById(id);
-
-exports.createGroup = (groupData) => new Group(groupData).save();
-
-exports.updateGroup = (id, groupData) => Group.findByIdAndUpdate(id, groupData, { new: true });
-
-exports.deleteGroup = (id) => Group.findByIdAndDelete(id);
+module.exports = groupService;

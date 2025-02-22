@@ -3,10 +3,10 @@ const reportController = require('../controllers/report.controller');
 const { authMiddleware } = require("../middleware/auth.middleware");
 const router = express.Router();
 
-router.get('/', authMiddleware, reportController.getAllReports);
-router.get('/:id', authMiddleware, reportController.getReportById);
-router.post('/', authMiddleware, reportController.createReport);
-router.put('/:id', authMiddleware, reportController.updateReport);
-router.delete('/:id', authMiddleware, reportController.deleteReport);
+router.get('/', authMiddleware, reportController.getAll);
+router.get('/:id', authMiddleware, reportController.getById);
+router.post('/', authMiddleware, reportController.create);
+router.put('/:id', authMiddleware, reportController.update);
+router.delete('/:id', authMiddleware, reportController.delete);
 
 module.exports = router;
