@@ -81,32 +81,33 @@ src/
 ### User
 ```javascript
 {
+  username: String,
   email: String,
   password: String,
   role: String,
-  createdAt: Date
 }
 ```
 
 ### Group
 ```javascript
 {
-  name: String,
   specialty: String,
   department: String,
-  studentsCount: Number,
-  createdAt: Date
+  numberOfStudents: Number,
+  startDate: Date,
+  endDate: Date
 }
 ```
 
 ### Teacher
 ```javascript
 {
-  name: String,
+  firstname: String,
+  lastname: String,
+  patronymic: String,
+  email: String,
   phone: String,
   experience: Number,
-  subjects: [String],
-  createdAt: Date
 }
 ```
 
@@ -117,19 +118,21 @@ src/
   group: ObjectId,
   subject: String,
   hours: Number,
-  type: String,
-  payment: Number,
-  createdAt: Date
+  typeOfClass: String,
+  paymentPerHour: Number,
 }
 ```
 
 ### Student
 ```javascript
 {
-  name: String,
+  firstname: String,
+  lastname: String,
+  patronymic: String,
+  email: String,
+  phone: String,
   group: ObjectId,
-  enrollmentDate: Date,
-  createdAt: Date
+  status: String
 }
 ```
 
@@ -139,8 +142,9 @@ src/
   teacher: ObjectId,
   amount: Number,
   date: Date,
-  status: String,
-  createdAt: Date
+  paymenrStatus: String,
+  paymentMethod: String,
+  notes: String
 }
 ```
 
