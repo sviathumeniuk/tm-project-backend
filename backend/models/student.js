@@ -27,7 +27,7 @@ const StudentSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        match: [/^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d- ]{7,10}$/]
+        match: /^[+]?[0-9]{1,4}?[-.\s]?[0-9]{1,15}$/
     },
 
     group: {

@@ -40,13 +40,3 @@ exports.deleteReport = asyncHandler(async (req, res) => {
   }
   res.status(200).json(deletedReport);
 });
-
-exports.getReportsByGroup = asyncHandler(async (req, res) => {
-  const reports = await ReportService.getReportByGroup(req.params.groupId);
-  res.status(200).json(reports);
-});
-
-exports.getReportsByTeacher = asyncHandler(async (req, res) => {
-  const reports = await ReportService.getReportByTeacher(req.params.teacherId);
-  res.status(200).json(reports);
-});

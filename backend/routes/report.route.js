@@ -8,7 +8,5 @@ router.get('/:id', authMiddleware, reportController.getReportById);
 router.post('/', authMiddleware, reportController.createReport);
 router.put('/:id', authMiddleware, reportController.updateReport);
 router.delete('/:id', authMiddleware, reportController.deleteReport);
-router.get('/group/:groupId', authMiddleware, reportController.getReportsByGroup);
-router.get('/teacher/:teacherId', authMiddleware, reportController.getReportsByTeacher);
 
 module.exports = router;

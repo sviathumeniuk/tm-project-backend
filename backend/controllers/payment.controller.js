@@ -40,13 +40,3 @@ exports.deletePayment = asyncHandler(async (req, res) => {
   }
   res.status(200).json(deletedPayment);
 });
-
-exports.getPaymentsByTeacher = asyncHandler(async (req, res) => {
-  const payments = await PaymentService.getPaymentByTeacher(req.params.teacherId);
-  res.status(200).json(payments);
-});
-
-exports.getPaymentsByStatus = asyncHandler(async (req, res) => {
-  const payments = await PaymentService.getPaymentByStatus(req.params.status);
-  res.status(200).json(payments);
-});

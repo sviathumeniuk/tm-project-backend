@@ -34,13 +34,3 @@ exports.deleteLoad = asyncHandler(async (req, res) => {
   }
   res.status(200).json(deletedLoad);
 });
-
-exports.getLoadsByTeacher = asyncHandler(async (req, res) => {
-  const loads = await LoadService.getLoadsByTeacher(req.params.teacherId);
-  res.status(200).json(loads);
-});
-
-exports.getLoadsByGroup = asyncHandler(async (req, res) => {
-  const loads = await LoadService.getLoadsByGroup(req.params.groupId);
-  res.status(200).json(loads);
-});

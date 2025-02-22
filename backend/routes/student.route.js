@@ -8,6 +8,5 @@ router.get('/:id', authMiddleware, studentController.getStudentById);
 router.post('/', authMiddleware, studentController.createStudent);
 router.put('/:id', authMiddleware, studentController.updateStudent);
 router.delete('/:id', authMiddleware, studentController.deleteStudent);
-router.get('/group/:groupId', authMiddleware, studentController.getStudentsByGroup);
 
 module.exports = router;

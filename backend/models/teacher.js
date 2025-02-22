@@ -20,14 +20,14 @@ const TeacherSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        match: [/^\S+@\S+\.\S+$/],
+        match: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
     },
 
     phone: {
         type: String,
         required: true,
         unique: true,
-        match: [/^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d- ]{7,10}$/]
+        match: /^[+]?[0-9]{1,4}?[-.\s]?[0-9]{1,15}$/
     },
 
     experience: {

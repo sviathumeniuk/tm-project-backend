@@ -40,8 +40,3 @@ exports.deleteStudent = asyncHandler(async (req, res) => {
   }
   res.status(200).json(deletedStudent);
 });
-
-exports.getStudentsByGroup = asyncHandler(async (req, res) => {
-  const students = await StudentService.getStudentsByGroup(req.params.groupId);
-  res.status(200).json(students);
-});
